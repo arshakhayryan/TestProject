@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<test-run id="0" runstate="Runnable" testcasecount="2" result="Passed" total="2" passed="2" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="2" engine-version="3.16.0.0" clr-version="4.0.30319.42000" start-time="2022-12-14 13:27:42Z" end-time="2022-12-14 13:27:44Z" duration="1.642027">
-  <command-line><![CDATA["C:\Users\Arshak Hayryan\Desktop\TestProject1\TestProject1\nunit.consolerunner\3.16.0\tools\nunit3-console.exe" .\bin\Debug\net6.0-windows\TestProject1.dll --where "(class =~ ShowPassword or class =~ShowUsername)"]]></command-line>
+<test-run id="0" runstate="Runnable" testcasecount="2" result="Passed" total="1" passed="1" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="1" engine-version="3.16.0.0" clr-version="4.0.30319.42000" start-time="2022-12-16 12:47:45Z" end-time="2022-12-16 12:47:46Z" duration="1.294700">
+  <command-line><![CDATA["C:\Users\Arshak Hayryan\Desktop\TestProject1\TestProject1\nunit.consolerunner\3.16.0\tools\nunit3-console.exe" .\bin\Debug\net6.0-windows\TestProject1.dll --where "class =~ ShowPassword"]]></command-line>
   <filter>
-    <or>
-      <class re="1">ShowPassword</class>
-      <class re="1">ShowUsername</class>
-    </or>
+    <class re="1">ShowPassword</class>
   </filter>
-  <test-suite type="Assembly" id="1-1004" name="TestProject1.dll" fullname="C:/Users/Arshak Hayryan/Desktop/TestProject1/TestProject1/bin/Debug/net6.0-windows/TestProject1.dll" runstate="Runnable" testcasecount="2" result="Passed" start-time="2022-12-14T13:27:42.8651041Z" end-time="2022-12-14T13:27:44.0469108Z" duration="1.181758" total="2" passed="2" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="2">
+  <test-suite type="Assembly" id="1-1004" name="TestProject1.dll" fullname="C:/Users/Arshak Hayryan/Desktop/TestProject1/TestProject1/bin/Debug/net6.0-windows/TestProject1.dll" runstate="Runnable" testcasecount="2" result="Passed" start-time="2022-12-16T12:47:46.1742072Z" end-time="2022-12-16T12:47:46.9858705Z" duration="0.811624" total="1" passed="1" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="1">
     <environment framework-version="3.13.3.0" clr-version="6.0.8" os-version="Microsoft Windows 10.0.22621" platform="Win32NT" cwd="C:\Users\Arshak Hayryan\Desktop\TestProject1\TestProject1" machine-name="DESKTOP-KQITALH" user="Arshak Hayryan" user-domain="DESKTOP-KQITALH" culture="en-US" uiculture="en-US" os-architecture="x64" />
     <settings>
       <setting name="DisposeRunners" value="True" />
@@ -20,15 +17,12 @@
       <setting name="NumberOfTestWorkers" value="12" />
     </settings>
     <properties>
-      <property name="_PID" value="7176" />
+      <property name="_PID" value="20956" />
       <property name="_APPDOMAIN" value="nunit-agent" />
     </properties>
-    <test-suite type="TestSuite" id="1-1005" name="TestProject1" fullname="TestProject1" runstate="Runnable" testcasecount="2" result="Passed" start-time="2022-12-14T13:27:42.8689338Z" end-time="2022-12-14T13:27:44.0469074Z" duration="1.177973" total="2" passed="2" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="2">
-      <test-suite type="TestFixture" id="1-1002" name="ShowPassword" fullname="TestProject1.ShowPassword" classname="TestProject1.ShowPassword" runstate="Runnable" testcasecount="1" result="Passed" start-time="2022-12-14T13:27:42.8699734Z" end-time="2022-12-14T13:27:43.5736180Z" duration="0.703645" total="1" passed="1" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="1">
-        <test-case id="1-1003" name="VerifyUserCanShowPassword" fullname="TestProject1.ShowPassword.VerifyUserCanShowPassword" methodname="VerifyUserCanShowPassword" classname="TestProject1.ShowPassword" runstate="Runnable" seed="2051163736" result="Passed" start-time="2022-12-14T13:27:42.8715237Z" end-time="2022-12-14T13:27:43.5713028Z" duration="0.699857" asserts="1" />
-      </test-suite>
-      <test-suite type="TestFixture" id="1-1000" name="ShowUsername" fullname="TestProject1.ShowUsername" classname="TestProject1.ShowUsername" runstate="Runnable" testcasecount="1" result="Passed" start-time="2022-12-14T13:27:43.5747527Z" end-time="2022-12-14T13:27:44.0469002Z" duration="0.472147" total="1" passed="1" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="1">
-        <test-case id="1-1001" name="VerifyUserCanTypeInUsernamefield" fullname="TestProject1.ShowUsername.VerifyUserCanTypeInUsernamefield" methodname="VerifyUserCanTypeInUsernamefield" classname="TestProject1.ShowUsername" runstate="Runnable" seed="1447869995" result="Passed" start-time="2022-12-14T13:27:43.5748620Z" end-time="2022-12-14T13:27:44.0468562Z" duration="0.471995" asserts="1" />
+    <test-suite type="TestSuite" id="1-1005" name="TestProject1" fullname="TestProject1" runstate="Runnable" testcasecount="2" result="Passed" start-time="2022-12-16T12:47:46.1779684Z" end-time="2022-12-16T12:47:46.9858575Z" duration="0.807889" total="1" passed="1" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="1">
+      <test-suite type="TestFixture" id="1-1002" name="ShowPassword" fullname="TestProject1.ShowPassword" classname="TestProject1.ShowPassword" runstate="Runnable" testcasecount="1" result="Passed" start-time="2022-12-16T12:47:46.1789885Z" end-time="2022-12-16T12:47:46.9855428Z" duration="0.806555" total="1" passed="1" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="1">
+        <test-case id="1-1003" name="VerifyUserCanShowPassword" fullname="TestProject1.ShowPassword.VerifyUserCanShowPassword" methodname="VerifyUserCanShowPassword" classname="TestProject1.ShowPassword" runstate="Runnable" seed="1594221942" result="Passed" start-time="2022-12-16T12:47:46.4906075Z" end-time="2022-12-16T12:47:46.9461666Z" duration="0.455637" asserts="1" />
       </test-suite>
     </test-suite>
   </test-suite>
