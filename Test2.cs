@@ -30,6 +30,7 @@ namespace TestProject1
             mainWindow.FindFirstDescendant(conditionFactory.ByAutomationId("checkBox1")).AsCheckBox().Click();
             Wait.UntilInputIsProcessed(waitTimeout : TimeSpan.FromMilliseconds(3000));
             mainWindow.FindFirstDescendant(conditionFactory.ByAutomationId("pswdTxt")).AsButton().Click();
+            Wait.UntilInputIsProcessed(waitTimeout: TimeSpan.FromMilliseconds(3000));
             string actualdPassword = mainWindow.FindFirstDescendant(conditionFactory.ByAutomationId("pswdTxt")).AsTextBox().Text;
             Assert.AreEqual(EXPECTED_PASSWORD, actualdPassword, "Unexpected value");
         }
