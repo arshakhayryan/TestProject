@@ -9,20 +9,37 @@ namespace TestProject1
 {
     [TestFixture]
     class ShowPassword
-    { 
+    {
+        private Application application;
+        private UIA3Automation automation;
+        private Window mainWindow;
+        private ConditionFactory conditionFactory = new ConditionFactory(new UIA3PropertyLibrary());
+        private const string EXPECTED_PASSWORD = "Tester@1";
+
+        [OneTimeSetUp]
+        public void RunApplication()
+        {
+            application = Application.Launch(AppInfo.path);
+            automation = new UIA3Automation();
+            mainWindow = application.GetMainWindow(automation);
+            
+           
+        }
+
         [Test]
         public void VerifyUserCanShowPassword ()
         {
-            var application = FlaUI.Core.Application.Launch(AppInfo.path);
-            var automation = new UIA3Automation();
-            var mainWindow = application.GetMainWindow(automation);
-            ConditionFactory conditionFactory = new ConditionFactory(new UIA3PropertyLibrary());
-            string expectedPassword = "Tester@1";
-
-            mainWindow.FindFirstDescendant(conditionFactory.ByAutomationId("pswdTxt")).AsTextBox().Enter(expectedPassword);
+           
+            mainWindow.FindFirstDescendant(conditionFactory.ByAutomationId("pswdTxt")).AsTextBox().Enter(EXPECTED_PASSWORD);
             mainWindow.FindFirstDescendant(conditionFactory.ByAutomationId("checkBox1")).AsCheckBox().Click();
             string actualdPassword = mainWindow.FindFirstDescendant(conditionFactory.ByAutomationId("pswdTxt")).AsTextBox().Text;
-            Assert.AreEqual(expectedPassword,actualdPassword,"Unexpected value");
+            Assert.AreEqual(EXPECTED_PASSWORD,actualdPassword,"Unexpected value");
+            
+        }
+
+        [OneTimeTearDown]
+        public void CloseApplication()
+        {
             application.Close();
         }
     }
