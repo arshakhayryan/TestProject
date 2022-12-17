@@ -16,6 +16,7 @@ namespace TestProject1
         public void RunApplication()
         {
             application = Application.Launch(AppInfo.path);
+            mainWindow = application.GetMainWindow(automation);
         }
 
         [OneTimeTearDown]

@@ -12,14 +12,13 @@ namespace TestProject1
         [Test]
         public void VerifyUserCanShowPassword()
         {
-            mainWindow = application.GetMainWindow(automation);
             mainWindow.FindFirstDescendant(conditionFactory.ByAutomationId("pswdTxt")).AsTextBox().Enter(EXPECTED_PASSWORD);
             mainWindow.FindFirstDescendant(conditionFactory.ByAutomationId("checkBox1")).AsCheckBox().Click();
             Wait.UntilInputIsProcessed(waitTimeout : TimeSpan.FromMilliseconds(3000));
             mainWindow.FindFirstDescendant(conditionFactory.ByAutomationId("pswdTxt")).AsButton().Click();
             Wait.UntilInputIsProcessed(waitTimeout: TimeSpan.FromMilliseconds(3000));
             string actualdPassword = mainWindow.FindFirstDescendant(conditionFactory.ByAutomationId("pswdTxt")).AsTextBox().Text;
-            Assert.AreEqual(EXPECTED_PASSWORD, actualdPassword, "Unexpected value");
+            Assert.That(actualdPassword, Is.EqualTo(EXPECTED_PASSWORD));
         }
     }
 }
