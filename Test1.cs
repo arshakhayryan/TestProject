@@ -7,19 +7,10 @@ using FlaUI.Core.Input;
 namespace TestProject1
 {
     [TestFixture]
-    class ShowUsername : BaseTest
+    [TestAttributes(Suite.Smoke)]
+    class Case1 : BaseTest
     {
-        //private Application application;
-        //private UIA3Automation automation = new UIA3Automation();
-        //private Window mainWindow;
-        //private ConditionFactory conditionFactory = new ConditionFactory(new UIA3PropertyLibrary());
         private const string  EXPECTED_VALUE = "Tester";
-
-        //[OneTimeSetUp]
-        //public void RunApplication()
-        //{
-        //    application = Application.Launch(AppInfo.path);
-        //}
 
         [Test]
         public void VerifyUserCanTypeInUsernamefield()
@@ -30,11 +21,5 @@ namespace TestProject1
             string actualdValue = mainWindow.FindFirstDescendant(conditionFactory.ByAutomationId("usernameTxt")).AsTextBox().Text;
             Assert.AreEqual(EXPECTED_VALUE, actualdValue, "Unexpected value");
         }
-
-        //[OneTimeTearDown]
-        //public void CloseApplication()
-        //{
-        //    application.Close();
-        //}
     }
 }
