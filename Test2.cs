@@ -8,6 +8,7 @@ using FlaUI.Core.Input;
 namespace TestProject1
 {
     [TestFixture]
+    
     class ShowPassword
     {
         private Application application;
