@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace TestProject1
 {
-    internal class TestAttributes
+    [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, AllowMultiple = true, Inherited = true)]
+    public class TestAttributes : PropertyAttribute
     {
+        public TestAttributes(Suite suite) : base(suite.ToString()) { }
     }
+
+    public enum Suite
+    {
+        Smoke
+    }
+
 }

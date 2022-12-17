@@ -12,6 +12,7 @@ namespace TestProject1
         [Test]
         public void VerifyUserCanShowPassword()
         {
+            mainWindow = application.GetMainWindow(automation);
             mainWindow.FindFirstDescendant(conditionFactory.ByAutomationId("pswdTxt")).AsTextBox().Enter(EXPECTED_PASSWORD);
             mainWindow.FindFirstDescendant(conditionFactory.ByAutomationId("checkBox1")).AsCheckBox().Click();
             Wait.UntilInputIsProcessed(waitTimeout : TimeSpan.FromMilliseconds(3000));
