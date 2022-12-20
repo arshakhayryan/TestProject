@@ -7,7 +7,7 @@ using FlaUI.Core.Input;
 namespace TestProject1
 {
     [TestFixture]
-    [Suite(Suite.CriticalPath)]
+    [Suite(Suite.Smoke)]
 
     class Case1 : BaseTest
     {
