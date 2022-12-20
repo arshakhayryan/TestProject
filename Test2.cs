@@ -4,7 +4,7 @@ using FlaUI.Core.Input;
 namespace TestProject1
 {
     [TestFixture]
-    [TestAttributes(Suite.Smoke)]
+    [Suite(Suite.Smoke)]
     class Case2 : BaseTest
     {
         private const string EXPECTED_PASSWORD = "Tester@1";

@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<test-run id="0" runstate="Runnable" testcasecount="2" result="Passed" total="1" passed="1" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="1" engine-version="3.16.0.0" clr-version="4.0.30319.42000" start-time="2022-12-17 14:16:01Z" end-time="2022-12-17 14:16:08Z" duration="7.381470">
-  <command-line><![CDATA["C:\Users\Arshak Hayryan\Desktop\TestProject1\TestProject1\nunit.consolerunner\3.16.0\tools\nunit3-console.exe" .\bin\Debug\net6.0-windows\TestProject1.dll --params:Suite=Smoke --where "class =~ Case2"]]></command-line>
+<test-run id="0" runstate="Runnable" testcasecount="2" result="Passed" total="1" passed="1" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="1" engine-version="3.16.0.0" clr-version="4.0.30319.42000" start-time="2022-12-20 08:48:16Z" end-time="2022-12-20 08:48:20Z" duration="4.013920">
+  <command-line><![CDATA["C:\Users\Arshak Hayryan\Desktop\TestProject1\TestProject1\nunit.consolerunner\3.16.0\tools\nunit3-console.exe" .\bin\Debug\net6.0-windows\TestProject1.dll --where Suite=CriticalPath]]></command-line>
   <filter>
-    <class re="1">Case2</class>
+    <prop name="Suite">CriticalPath</prop>
   </filter>
-  <test-suite type="Assembly" id="1-1004" name="TestProject1.dll" fullname="C:/Users/Arshak Hayryan/Desktop/TestProject1/TestProject1/bin/Debug/net6.0-windows/TestProject1.dll" runstate="Runnable" testcasecount="2" result="Passed" start-time="2022-12-17T14:16:01.8326442Z" end-time="2022-12-17T14:16:08.7439319Z" duration="6.911220" total="1" passed="1" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="1">
+  <test-suite type="Assembly" id="1-1004" name="TestProject1.dll" fullname="C:/Users/Arshak Hayryan/Desktop/TestProject1/TestProject1/bin/Debug/net6.0-windows/TestProject1.dll" runstate="Runnable" testcasecount="2" result="Passed" start-time="2022-12-20T08:48:16.8212821Z" end-time="2022-12-20T08:48:20.3710278Z" duration="3.549706" total="1" passed="1" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="1">
     <environment framework-version="3.13.3.0" clr-version="6.0.8" os-version="Microsoft Windows 10.0.22621" platform="Win32NT" cwd="C:\Users\Arshak Hayryan\Desktop\TestProject1\TestProject1" machine-name="DESKTOP-KQITALH" user="Arshak Hayryan" user-domain="DESKTOP-KQITALH" culture="en-US" uiculture="en-US" os-architecture="x64" />
     <settings>
       <setting name="DisposeRunners" value="True" />
       <setting name="WorkDirectory" value="C:\Users\Arshak Hayryan\Desktop\TestProject1\TestProject1" />
-      <setting name="TestParametersDictionary" value="[Suite, Smoke]">
-        <item key="Suite" value="Smoke" />
-      </setting>
-      <setting name="TestParameters" value="Suite=Smoke" />
       <setting name="ImageRuntimeVersion" value="4.0.30319" />
       <setting name="ImageTargetFrameworkName" value=".NETCoreApp,Version=v6.0" />
       <setting name="ImageRequiresX86" value="False" />
@@ -21,15 +17,18 @@
       <setting name="NumberOfTestWorkers" value="12" />
     </settings>
     <properties>
-      <property name="_PID" value="21328" />
+      <property name="_PID" value="19056" />
       <property name="_APPDOMAIN" value="nunit-agent" />
     </properties>
-    <test-suite type="TestSuite" id="1-1005" name="TestProject1" fullname="TestProject1" runstate="Runnable" testcasecount="2" result="Passed" start-time="2022-12-17T14:16:01.8372512Z" end-time="2022-12-17T14:16:08.7439187Z" duration="6.906667" total="1" passed="1" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="1">
-      <test-suite type="TestFixture" id="1-1002" name="Case2" fullname="TestProject1.Case2" classname="TestProject1.Case2" runstate="Runnable" testcasecount="1" result="Passed" start-time="2022-12-17T14:16:01.8382675Z" end-time="2022-12-17T14:16:08.7435641Z" duration="6.905297" total="1" passed="1" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="1">
+    <test-suite type="TestSuite" id="1-1005" name="TestProject1" fullname="TestProject1" runstate="Runnable" testcasecount="2" result="Passed" start-time="2022-12-20T08:48:16.8250398Z" end-time="2022-12-20T08:48:20.3710165Z" duration="3.545977" total="1" passed="1" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="1">
+      <properties />
+      <test-suite type="TestFixture" id="1-1000" name="Case1" fullname="TestProject1.Case1" classname="TestProject1.Case1" runstate="Runnable" testcasecount="1" result="Passed" start-time="2022-12-20T08:48:16.8260370Z" end-time="2022-12-20T08:48:20.3707227Z" duration="3.544686" total="1" passed="1" failed="0" warnings="0" inconclusive="0" skipped="0" asserts="1">
         <properties>
-          <property name="TestAttributes" value="Smoke" />
+          <property name="Suite" value="CriticalPath" />
         </properties>
-        <test-case id="1-1003" name="VerifyUserCanShowPassword" fullname="TestProject1.Case2.VerifyUserCanShowPassword" methodname="VerifyUserCanShowPassword" classname="TestProject1.Case2" runstate="Runnable" seed="1136172759" result="Passed" start-time="2022-12-17T14:16:01.8631897Z" end-time="2022-12-17T14:16:08.6850922Z" duration="6.821971" asserts="1" />
+        <test-case id="1-1001" name="VerifyUserCanTypeInUsernamefield" fullname="TestProject1.Case1.VerifyUserCanTypeInUsernamefield" methodname="VerifyUserCanTypeInUsernamefield" classname="TestProject1.Case1" runstate="Runnable" seed="726616035" result="Passed" start-time="2022-12-20T08:48:17.1178493Z" end-time="2022-12-20T08:48:20.3390274Z" duration="3.221248" asserts="1">
+          <properties />
+        </test-case>
       </test-suite>
     </test-suite>
   </test-suite>
